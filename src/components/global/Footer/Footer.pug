@@ -1,30 +1,137 @@
-footer
-	.tool-fixed-cta
-		.btn.button-to-top
-			.btn-icon
-				.icon 
-		a.btn.btn-content(class="bg-red-400")
-			.btn-icon
-				.icon
-					i.fa-light.fa-location-dot
-			.content Chi nhánh
-		a.btn.btn-content(class="bg-orange-500")
-			.btn-icon
-				.icon
-					i.fa-light.fa-phone
-			.content 1900 2273 – (028) 7100 0001
-		.btn.btn-content.btn-social
-			.btn-icon
-				.icon
-					i.fa-light.fa-messages
-			.content
-				ul 
-					li 
-						a(href="") 
-							img(src="./img/mess.svg", alt="facebook", class="")
-					li 
-						a(href="") 
-							img(src="./img/mess.svg", alt="zalo", class="")
-					li 
-						a(href="") 
-							img(src="./img/mess.svg", alt="facebook", class="")
+footer.footer
+	.footer-top(class="bg-Primary-1 py-15")
+		.container 
+			.footer-list 
+				.footer-column 
+					.footer-logo(class="rem:w-[112px] rem:mb-[14px]")
+						a(href="#" class="img-ratio lozad")
+							img(src="./img/logo.png", alt="") 
+					.footer-contact 
+						h3(class="text-lg font-bold text-Neutral-White rem:mb-[10px]") Subscribe to our Newletters
+						form(action="" class="flex items-center gap-2 w-full")
+							.form-input 
+								input(type="text" placeholder="Email") 
+							a.button-to-top
+					.footer-social 
+						a(href="#")
+							i.fa-brands.fa-facebook-f
+						a(href="#")
+							i.fa-brands.fa-youtube
+						a(href="#")
+							i.fa-brands.fa-instagram
+						a(href="#")
+							i.fa-brands.fa-tiktok
+						a(href="#")
+							i.fa-brands.fa-linkedin-in
+					.footer-info 
+						.item 
+							.icon 
+								i.fa-regular.fa-phone
+							.content 
+								a(href="#") Hotline: +84 (0) 28 7301 9199 
+						.item 
+							.icon 
+								i.fa-brands.fa-whatsapp
+							.content 
+								a(href="#") Whatsapp: https://wa.me/84376099520
+						.item 
+							.icon 
+								i.fa-regular.fa-envelope
+							.content 
+								a(href="#") Email: hello@petadventures.org
+				.footer-column 
+					h3(class="rem:text-[16px] font-bold mb-6") Quick link		
+					ul.footer-menu 
+						li 
+							a(href="#") About us
+						li 
+							a(href="#") Destinations
+						li 
+							a(href="#") Resource
+						li 
+							a(href="#") Support
+						li 
+							a(href="#") Adventures
+						li 
+							a(href="#") Contact Us
+				.footer-column 
+					h3(class="rem:text-[16px] font-bold mb-6") Quick link		
+					ul.footer-menu 
+						li 
+							a(href="#") Door-to-door
+						li 
+							a(href="#") Flight Concierge
+						li 
+							a(href="#") Premium Import and Export
+						li 
+							a(href="#") Standard Import and Export
+				.footer-column 
+					.wrap-item-toggle.wrap-toggle-facilities(class='flex flex-col')
+						- for(var i = 0; i < 4; i++)
+							.item-toggle(class="group transition-300 border-t border-t-Neutral-200 border-b border-b-Neutral-200 first:border-none last:border-none py-6 first:pt-0")
+								.title(class=" rem:text-[16px] md:title-32 font-semibold flex items-center justify-between cursor-pointer transition-300" data-target="program-1")
+									span(class="rem:text-[16px] text-Neutral-White font-bold") Viet Nam
+									i.fa-regular.fa-chevron-down(class="transition-300 text-Neutral-White rem:text-[16px] font-normal")
+								.content(style="display: none;")
+									.box(class="bg-black/20 rounded-xl p-3 mt-6")
+										h3(class="rem:text-[16px] font-medium text-Primary-2 mb-3") HCMC
+										.desc(class="text-sm font-normal text-Neutral-White") 224 Nguyen Van Huong Street, Thao Dien Ward, Thu Duc City, Ho Chi Minh City.
+									.box(class="bg-black/20 rounded-xl p-3 mt-6")
+										h3(class="rem:text-[16px] font-medium text-Primary-2 mb-3") HCMC
+										.desc(class="text-sm font-normal text-Neutral-White") 224 Nguyen Van Huong Street, Thao Dien Ward, Thu Duc City, Ho Chi Minh City.
+	.footer-bottom(class="bg-Primary-4 py-3")
+		.container
+			.wrapper(class="flex items-center justify-between")
+				.col-left 
+					.copyright © 2025 Pet Adventure. All Rights Reserved. Website designed by CanhCam.
+				.col-right(class="flex items-center gap-6")
+					a(href="#") Terms of use
+					a(href="#") Privacy policy
+.tool-fixed-cta
+	ul 
+		li 
+			a.phone(href="#")
+				i.fa-light.fa-phone
+		li 
+			a(href="#")
+				i.fa-light.fa-messages-question
+		li 
+			a.whatapp(href="#")
+				i.fa-brands.fa-whatsapp
+#popup-form.popup-form(style="display: none;" data-fancybox-modal)
+	.popup-content 
+		.popup-main(class="flex flex-col md:flex-row")
+			.col-left(class="md:rem:w-[382px] w-full")
+				.image 
+					a(href="#" class="img-ratio ratio:pt-[511_381] lozad rounded-tl-3xl rounded-bl-3xl")
+						img(src="./img/1.jpg", alt="") 
+			.col-right(class="md:w-[calc(100%-19.895833333333336rem)] w-full")
+				h3(class="text-2xl text-black font-semibold mb-6") Consultation Contact Form
+				form(action="")
+					.form-list(class="grid grid-cols-2 gap-3 max-md:grid-cols-1")
+						.form-group
+							input(type="text" placeholder="First Name")
+						.form-group
+							input(type="text" placeholder="Last Name")
+						.form-group(class="col-span-2")
+							input(type="text" placeholder="Phone Number/ Whatsapp Number")
+						.form-group(class="col-span-2")
+							input(type="text" placeholder="Email")
+						.form-group.select-view
+							select(name="yourSelectName")
+								option(value="") -- Please choose an option --
+								option(value="option1") Option 1
+								option(value="option2") Option 2
+								option(value="option3") Option 3
+						.form-group.select-view
+							select(name="yourSelectName")
+								option(value="") -- Please choose an option --
+								option(value="option1") Option 1
+								option(value="option2") Option 2
+								option(value="option3") Option 3
+
+						.form-content(class="col-span-2")
+							textarea(name="message" placeholder="How can I help you?")
+					.form-submit
+						a(href="#" class="button-primary orange")
+							span Send

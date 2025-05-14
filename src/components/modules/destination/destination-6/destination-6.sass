@@ -1,0 +1,34 @@
+.destination-6
+
+	.col-left
+		.item
+			@apply py-5 text-xl font-bold text-Neutral-White
+			@apply border-b border-b-white/10 hover:text-Primary-2
+			@apply transition-all ease-out cursor-pointer
+			&.active
+				@apply text-Primary-2
+	.col-right
+		.content
+			@apply hidden
+			&.active
+				@apply block
+@media (max-width: 1279.98px)
+	.destination-6
+
+		.frame-1
+			left: unset
+			@apply right-[12rem]
+		.frame-2
+			left: unset
+			@apply right-[9rem]
+			.image
+				@apply w-[2.3rem]
+		.frame-3
+			.image
+				@apply w-[2.3rem]
+
+@media (max-width: 1023.98px)
+	.destination-6
+		@apply z-10
+		.frame-1, .frame-2, .frame-3, .frame-4
+			@apply -z-1

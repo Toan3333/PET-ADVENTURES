@@ -67,7 +67,8 @@ module.exports = {
 			},
 		},
 		fontFamily: {
-			primary: ["Lexend", "sans-serif"],
+			primary: ["Poppins", "sans-serif"],
+			secondary: ["Inter Tight", "sans-serif"],
 			awesome: ['"Font Awesome 6 Pro"'],
 		},
 		fontSize: {
@@ -216,6 +217,7 @@ module.exports = {
 					1: "#253405",
 					2: "#c16b15",
 					3: "#faf7f1",
+					4: "#212F03",
 				},
 				Neutral: {
 					50: "#f6f6f6",
@@ -229,7 +231,7 @@ module.exports = {
 					900: "#3d3d3d",
 					950: "#292929",
 					White: "#ffffff",
-					"500 main": "#818181",
+					"500-main": "#818181",
 					Black: "#000000",
 				},
 				stroke: {

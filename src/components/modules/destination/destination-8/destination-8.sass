@@ -1,0 +1,47 @@
+.destination-8
+	.col-left
+		.form-list
+			.form-group
+				@apply w-full
+				input,select
+					@apply w-full py-2 px-4 rounded-lg bg-Neutral-White rem:h-[36px]
+					@apply border border-Neutral-200 text-sm font-normal text-Neutral-500-main
+				
+	
+			.select-view
+				@apply flex items-center gap-3 relative text-Neutral-500-main
+				&::before
+					content: "\f078"
+					@apply font-awesome right-3 absolute text-Neutral-500-main text-sm
+				label
+					@apply text-xl font-normal text-Neutral-500-main
+				select
+					appearance: none
+					-webkit-appearance: none
+					-moz-appearance: none
+					@apply border border-Neutral-200  py-2 px-4 w-full cursor-pointer
+			.form-content
+				@apply w-full rem:h-[120px]
+				textarea
+					@apply w-full py-2 px-4 rounded-lg bg-Neutral-White
+					@apply border border-Neutral-200 text-sm font-normal text-Neutral-500-main h-full
+		.form-submit
+			@apply inline-flex mt-5
+			.button-primary
+				@apply py-2 px-6
+@media (max-width: 1279.98px)
+	.destination-8
+		.col-right
+			.image
+				top: unset
+				@apply bottom-0  w-full
+@media (max-width: 767.98px)
+	.destination-8
+		.box
+			@apply px-5
+		.col-left
+			.form-list
+				.form-group
+					@apply col-span-2
+					input,select
+						@apply h-auto

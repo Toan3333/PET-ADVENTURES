@@ -1,0 +1,29 @@
+section.home-11(class="section-py" setBackground="./img/bg.png")
+	.container 
+		h2(class="title-48 mb-base text-center") Resources
+		.home-11-main(class="flex flex-col lg:flex-row xl:gap-20 gap-base")
+			.col-left(class="lg:rem:w-[640px] w-full")
+				.item(class="group")
+					.image 
+						a(href="#" class="img-ratio ratio:pt-[380_640] lozad rounded-2xl zoom-img")
+							img(src="./img/1.jpg", alt="") 
+					.content(class="py-5")
+						.date(class="text-sm font-secondary text-Neutral-500-main font-normal mb-4") 24.01.2025
+						h3(class="text-2xl font-bold text-Primary-1 mb-4 group-hover:text-Primary-2")
+							a(href="#") Understanding the Rabies Neutralising Antibody Titre Test (RNATT)
+						.desc(class="text-Neutral-700 font-normal") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+			.col-right(class="lg:w-[calc(100%-33.333333333333336rem-4.16667rem)] w-full flex flex-col gap-base")
+				-for(var i = 0; i < 3; i++ )
+					.column(class="flex gap-5 group")
+						.image(class="rem:w-[240px]")
+							a(href="#" class="img-ratio ratio:pt-[160_240] zoom-img lozad rounded-2xl")
+								img(src="./img/1.jpg", alt="") 
+						.content(class="w-[calc(100%-12.5rem-1.04167rem)]")
+							.date(class="text-sm font-secondary text-Neutral-500-main font-normal mb-4") 24.01.2025
+							h3(class="text-xl font-semibold text-Primary-1 mb-4 group-hover:text-Primary-2")
+								a(href="#") The best care takers of any kind of pets
+							.desc(class="text-Neutral-700 font-normal") Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+		.home-11-more(class="flex items-center justify-center mt-base")
+			.home-11-btn(class="inline-flex")
+				a(href="#" class="button-primary orange")
+					span Explore More

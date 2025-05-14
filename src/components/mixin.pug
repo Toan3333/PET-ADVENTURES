@@ -34,6 +34,19 @@ mixin HeaderLanguageHorizontal()
 		li.wpml-ls-item
 			a(href="") 
 				span.wpml-ls-native VN
+mixin Language()
+	ul.wpml-ls
+		li.wpml-ls-item.wpml-ls-current-language(class="group relative")
+			a(href="#")
+				span.wpml-ls-native VN
+			ul.wpml-ls-sub-menu(class="absolute left-0 top-full w-full opacity-0 group-hover:opacity-100 transition-opacity group-hover:visible invisible duration-300 ease-in-out")
+				li.wpml-ls-item
+					a(href="#")
+						span.wpml-ls-native VN
+				li.wpml-ls-item
+					a(href="#")
+						span.wpml-ls-native EN
+
 mixin BtnPrimary(text="")
 	a(href="", class='btn-primary btn ' + attributes.class)
 		span=text
@@ -54,36 +67,9 @@ mixin btnSecondary()
 			span(class="icon to-right") 
 				i.fa-regular.fa-arrow-right
 				i.fa-regular.fa-arrow-right
-mixin toolFixed()
-	.tool-fixed-cta
-		.btn.button-to-top
-			.btn-icon
-				.icon 
-		a.btn.btn-content
-			.btn-icon
-				.icon
-					i.fa-light.fa-location-dot
-			.content Chi nhánh
-		a.btn.btn-content
-			.btn-icon
-				.icon
-					i.fa-light.fa-phone
-			.content 1900 2273 – (028) 7100 0001
-		.btn.btn-content.btn-social
-			.btn-icon
-				.icon
-					i.fa-light.fa-messages
-			.content
-				ul 
-					li 
-						a(href="") 
-							img(src="./img/social/mess.png", alt="facebook", class="")
-					li 
-						a(href="") 
-							img(src="./img/social/zalo.png", alt="zalo", class="")
-					li 
-						a(href="") 
-							img(src="./img/social/mess-bot.png", alt="facebook", class="")
+mixin ButtonPrimary(text) 
+	a(href="#" class="button-primary")
+		span=text
 
 				
 

@@ -1,3 +1,5 @@
+import { CountUp } from "countup.js";
+
 export function setBackgroundElement() {
 	$("[setBackground]").each(function () {
 		var background = $(this).attr("setBackground");
@@ -193,31 +195,31 @@ export function indicatorSlide() {
 
 export function countUpInit() {
 	const countUpElements = document.querySelectorAll(".countup");
-	let countUp;
+
 	countUpElements.forEach((element) => {
 		const targetNumber = element.getAttribute("data-number");
-		// Check if number is decimal values
-		// const is_decimal = targetNumber?.includes(".");
-		countUp = new CountUp(element, targetNumber, {
+		const decimalPart = targetNumber.split(".")[1];
+		const decimalPlaces = decimalPart ? decimalPart.length : 0;
+
+		// Kiểm tra nếu là số thập phân (có phần sau dấu ".") và bỏ dấu "+"
+		const suffix = decimalPlaces > 0 ? "" : "+";
+
+		// Nếu là số nguyên (không có phần thập phân), bỏ separator
+		const separator = decimalPlaces > 0 ? "." : "";
+
+		const countUp = new CountUp(element, targetNumber, {
 			duration: 4,
-			separator: ".",
-			decimal: ",",
+			separator: separator,
+			decimal: ".",
 			enableScrollSpy: true,
-			suffix: "+",
-			// decimalPlaces: is_decimal ? 2 : 0,
+			suffix: suffix,
+			decimalPlaces: decimalPlaces,
 		});
+
 		if (!countUp.error) {
 			countUp.start();
 		} else {
 			console.error(countUp.error);
 		}
 	});
-	return {
-		reset: () => {
-			countUp.reset();
-		},
-		start: () => {
-			countUp.start();
-		},
-	};
 }

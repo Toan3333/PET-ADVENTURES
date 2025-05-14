@@ -1,0 +1,21 @@
+.home-10
+	@apply relative
+	.col-left
+		h3
+			line-height: calc( 32 / 24 )
+	.home-10-arrow
+		.home-10-scroll
+			@apply inline-flex
+			.swiper-scrollbar 
+				@apply rem:w-[168px] h-[2px] rounded-lg bg-Neutral-100 static
+			/* Tùy chỉnh phần tay cầm của thanh cuộn */
+			.swiper-scrollbar .swiper-scrollbar-drag 
+				@apply bg-Primary-2 h-[2px] rounded-lg #{!important}
+			.swiper-scrollbar:hover .swiper-scrollbar-drag 
+				@apply bg-Primary-2
+			.swiper-scrollbar::-webkit-scrollbar 
+				width: 10px 
+				height: 8px 
+			.swiper-scrollbar::-webkit-scrollbar-track 
+				background: #f0f0f0
+				border-radius: 10px

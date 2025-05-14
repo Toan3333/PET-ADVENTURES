@@ -1,0 +1,21 @@
+section.home-6(class="lg:pt-20 pt-10 pb-10")
+	.container 
+		h2(class="title-48 text-center mb-base") Destinations
+		.home-6-slide(class="relative")
+			.swiper
+				.swiper-wrapper 
+					-for(var i = 0; i < 10; i++ )
+						.swiper-slide 
+							.item
+								.flag(class="p-4 rounded-5 bg-Neutral-50")
+									a(href="#" class="img-ratio rounded-2xl lozad")
+										img(src="./img/national.png", alt="") 
+								.content(class="text-center") 
+									h3(class="text-xl font-semibold text-Neutral-950 py-3 rem:px-[10px]") USA
+			.wrap-button-slide(class="xl:block hidden")
+				.btn.btn-prev.btn-sw-1
+				.btn.btn-next.btn-sw-1
+			.wrap-button-slide-mobile(class="flex items-center justify-center mt-base gap-3 xl:hidden")
+				.btn.btn-prev.btn-sw-1
+				.btn.btn-next.btn-sw-1
+

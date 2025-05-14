@@ -6,6 +6,7 @@ import {
 	buttonToTop,
 	clickScrollToDiv,
 	appendCaptchaASP,
+	ToggleItem,
 	countUpInit,
 } from "./helper";
 import { header } from "./header";
@@ -16,29 +17,39 @@ $(document).ready(function () {
 	header.init();
 	swiperInit();
 	buttonToTop();
-	// countUpInit();
+	ToggleItem();
+	countUpInit();
+
+	const $items = $(".destination-6 .item");
+	const $contents = $(".destination-6 .content");
+
+	// Function to reset active states
+	function resetActive() {
+		$items.removeClass("active");
+		$contents.removeClass("active");
+	}
+
+	// Hover event handler
+	$items.on("mouseenter", function () {
+		resetActive();
+		const id = $(this).data("id");
+		const $content = $(`.content[data-id="${id}"]`);
+
+		// Check if content exists before adding active class
+		if ($content.length > 0) {
+			$(this).addClass("active");
+			$content.addClass("active");
+		}
+	});
+
+	// Set the first item as active by default (if items and contents exist)
+	if ($items.length > 0 && $contents.length > 0) {
+		const $firstItem = $items.first();
+		const $firstContent = $contents.first();
+		$firstItem.addClass("active");
+		$firstContent.addClass("active");
+	}
 });
-
-// export function indicatorSlide() {
-// 	if ($(".indicator-swipe").length > 0) {
-// 		var callback = function (entries) {
-// 			entries.forEach(function (entry) {
-// 				if (entry.isIntersecting) {
-// 					entry.target.classList.add("active");
-// 					setTimeout(function () {
-// 						entry.target.classList.remove("active");
-// 					}, 3000);
-// 				}
-// 			});
-// 		};
-
-// 		var observer = new IntersectionObserver(callback);
-// 		var animationItems = document.querySelectorAll(".indicator-swipe");
-// 		animationItems.forEach(function (item) {
-// 			observer.observe(item);
-// 		});
-// 	}
-// }
 
 // fancyfox popup
 document.addEventListener("DOMContentLoaded", function () {
@@ -51,6 +62,17 @@ document.addEventListener("DOMContentLoaded", function () {
 		},
 	});
 });
+
+setTimeout(() => {
+	Fancybox.show([
+		{
+			src: "#popup-form",
+			type: "inline",
+			dragToClose: false,
+			backdropClick: false,
+		},
+	]);
+}, 15000);
 
 /*==================== Aos Init ====================*/
 AOS.init({

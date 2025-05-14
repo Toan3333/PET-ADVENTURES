@@ -1,0 +1,33 @@
+section.home-10(class="section-py")
+	h2(class="title-48 text-center lg:mb-15 mb-6") Read reviews, ride with confidence 
+	.home-10-main(class="flex flex-col md:flex-row rem:gap-[42px] xl:rem:pl-[260px] px-4")
+		.col-left(class="md:rem:w-[240px] w-full")
+			.icon(class="mb-6 md:w-auto w-[60px]")
+				a(href="#" class="img-ratio ratio:pt-[142_200] lozad")
+					img(src="./img/quote.svg", alt="") 
+			h3(class="text-2xl font-semibold text-Primary-1") What our customers are saying
+			.home-10-arrow(class="flex items-center gap-1 mt-6")
+				.btn-prev(class="w-8")
+					a(href="#" class="img-ratio")
+						img(src="./img/btn-prev.svg", alt="") 
+				.home-10-scroll
+					.swiper-scrollbar
+				.btn-next(class="w-8")
+					a(href="#" class="img-ratio")
+						img(src="./img/btn-next.svg", alt="") 
+		.col-right(class="md:w-[calc(100%-12.5rem-2.1875rem)] w-full")
+			.swiper 
+				.swiper-wrapper 
+					-for(var i = 0; i < 6; i++ )
+						.swiper-slide 
+							.item(class="bg-Primary-3 rounded-3xl p-6 xl:rem:h-[330px] h-auto")
+								.home-10-top 
+									.desc(class="text-Neutral-950 font-normal pb-10 border-b border-b-Neutral-200") Moving our dog internationally seemed daunting, but the team was outstanding! They handled everything smoothly & efficiently, providing reassurance every step of the way. Highly recommended!
+								.home-10-bottom(class="flex items-center gap-4 pt-10")
+									.avatar(class="rem:w-[53px]")
+										a(href="#" class="img-ratio lozad rounded-full")
+											img(src="./img/1.jpg", alt="") 
+									.info 
+										.name(class="text-lg font-medium text-Neutral-950 leading-[1.3]") Eric & Haku 
+										.job(class="text-Neutral-500-main font-normal") President of Sales
+									

@@ -1,0 +1,70 @@
+.footer
+	@apply text-Neutral-White
+	.footer-list
+		display: grid
+		grid-template-columns: 2.7fr 1.5fr 2fr 3fr
+		@apply gap-25
+		.footer-column
+			ul.footer-menu
+				@apply flex flex-col gap-6
+				li
+					a
+						@apply rem:text-[16px] border-b border-b-transparent hover:border-b-Neutral-White				
+
+	.footer-contact 
+		.form-input 
+			@apply w-full
+			input
+				@apply w-full py-2 px-4 rounded-lg bg-Neutral-White
+	.footer-social 
+		@apply flex items-center justify-between mt-base mb-8
+		a
+			@apply w-10 h-10 rounded-lg inline-flex items-center justify-center border border-[#d9d9d9] text-xl hover:bg-Primary-2
+	.footer-info 
+		@apply flex flex-col gap-3
+		.item
+			@apply flex items-center gap-3
+			.icon
+				@apply text-sm font-normal
+			.content
+				a
+					@apply text-sm font-normal border-b border-b-transparent hover:border-b-Neutral-White
+.tool-fixed-cta
+	@apply fixed bottom-2 right-0 z-999  pb-15 pr-5
+	ul
+		@apply flex flex-col gap-2
+		li
+			a
+				animation: pulse-icon 1.2s infinite ease-in-out
+				@apply w-15 h-15 inline-flex items-center justify-center bg-Primary-2 text-Neutral-White rounded-full text-2xl
+				&.whatapp
+					@apply text-32
+@keyframes pulse-icon 
+	0%, 100% 
+		transform: scale(1)
+	50% 
+		transform: scale(1.05)
+
+
+
+
+
+@media (max-width: 1023.98px)
+	.footer
+		.footer-list
+			@apply grid-cols-2 gap-20
+		.footer-bottom
+			.wrapper
+				@apply flex-col
+
+@media (max-width: 767.98px)
+	.footer
+		.footer-top
+			@apply py-10
+		.footer-list
+			@apply grid-cols-1 gap-15
+		.footer-social 
+			@apply justify-start gap-3
+		.footer-bottom
+			.copyright
+				@apply text-center

@@ -1,0 +1,17 @@
+section.home-9(class="section-py" setBackground="./img/bg-home-9-1.png")
+	.container 
+		.heading(class="lg:rem:w-[984px] w-full mx-auto text-Neutral-White")
+			h2(class="title-48 text-center mb-base !text-Neutral-White") Certificates 
+			.desc(class="text-Neutral-White opacity-80 font-normal") We’re internationally certified and accredited, with an extensive global network of pet relocation professionals, vets and pet service providers! This ensures that you pet’s travel with us is safe, seamless and with the highest levels of comfort.
+			.home-9-slide(class="relative")
+				.swiper 
+					.swiper-wrapper
+						-for(var i = 0; i < 6; i++ )
+							.swiper-slide 
+								.item(class="bg-Neutral-White rounded-xl py-3 px-6 flex justify-center items-center")
+									.image(class="rem:w-[135px]")
+										a(href="#" class="img-ratio ratio:pt-[87_135] lozad")
+											img(src="./img/partner.png", alt="") 
+				.wrap-button-slide
+					.btn.btn-prev.btn-sw-1
+					.btn.btn-next.btn-sw-1

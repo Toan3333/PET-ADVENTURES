@@ -1,0 +1,22 @@
+.home-4
+	.col-left
+		.home-4-item
+			.title
+				@apply text-2xl font-normal text-Neutral-White opacity-90 cursor-pointer transition-all ease-out py-1 px-6 border-l-2 border-l-transparent
+				&.active
+				
+					@apply text-32 font-semibold text-Primary-2 border-l-2 border-l-Primary-2
+	.swiper
+		.swiper-slide
+			@apply transition-all 
+		.item
+			@apply relative transition-all 
+			&::before
+				content: ""
+				background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 53.06%, rgba(0, 0, 0, 0.50) 100%)
+				@apply absolute w-full h-full pointer-events-none top-0 left-0 z-10 rounded-3xl
+		.pagination
+			.swiper-pagination-bullet
+				@apply w-3 h-3 inline-flex flex-shrink-0 bg-Neutral-200 rounded-full transition-all ease-in-out opacity-100
+				&-active
+					@apply bg-Primary-2

@@ -2,48 +2,91 @@
 	.item-comp
 		@apply flex
 	.button-to-top
-		@apply opacity-0 pointer-events-none
+		@apply  w-10 h-10 bg-Primary-2 flex-center flex-shrink-0 rounded-lg cursor-pointer
 		&.active
 			@apply opacity-100 pointer-events-auto
-	.form-contact-out-stock 
-		@apply rem:w-[850px]  relative max-md:w-full
+		&::before
+			content: ""
+			background-image: url("../img/up.svg")
+			background-size: 100% 100%
+			@apply inline-block w-6 h-6 flex-shrink-0
+	.button-primary
+		@apply py-3 px-6 rounded-full bg-Primary-3 rem:text-[16px] font-medium inline-flex justify-center items-center w-full
+		&:hover
+			@apply bg-Primary-1 text-Neutral-White
+		&.orange
+			@apply bg-Primary-2 text-Neutral-White
+			&:hover
+				@apply bg-Primary-1
+	.fancybox__content :focus:not(.carousel__button.is-close)
+		@apply outline-none #{!important}
+	#popup-form
+		@apply lg:rem:w-[967px] md:w-[48rem] w-full px-4 pt-0 lg:p-0  bg-transparent
+		.popup-content
+			@apply w-full 
+			.col-left
+				@apply rounded-3xl hidden md:block
+				&:focus
+					@apply outline-none #{!important}
+				.image
+					@apply rounded-3xl
+					&:focus
+						@apply outline-none #{!important}
+					a
+						img
+							@apply block
+			.col-right
+				@apply md:py-10 md:px-8 p-6 bg-Neutral-White md:rounded-tr-3xl md:rounded-br-3xl rounded-none
+				.form-list
+					.form-group
+						@apply w-full col-span-2 lg:col-span-1
+						input,select
+							@apply w-full py-2 px-4 rounded-lg bg-Neutral-White h-full xl:rem:h-[36px]
+							@apply border border-Neutral-200 text-sm font-normal text-Neutral-500-main				
+							&:focus
+								@apply outline-none #{!important}
+						textarea
+							&:focus
+								@apply outline-none #{!important}
+					.select-view
+						@apply flex items-center gap-3 relative text-Neutral-500-main
+						&::before
+							content: "\f078"
+							@apply font-awesome right-3 absolute text-Neutral-500-main text-sm
+						label
+							@apply text-xl font-normal text-Neutral-500-main
+						select
+							appearance: none
+							-webkit-appearance: none
+							-moz-appearance: none
+							@apply border border-Neutral-200  py-2 px-4 w-full cursor-pointer
+					.form-content
+						@apply w-full rem:h-[120px]
+						textarea
+							@apply w-full py-2 px-4 rounded-lg bg-Neutral-White
+							@apply border border-Neutral-200 text-sm font-normal text-Neutral-500-main h-full
+				.form-submit
+					@apply flex mt-5
+					.button-primary
+						@apply py-2 px-6
 		.carousel__button
 			position: absolute !important
 			top: 0.5rem !important
 			right: 0.5rem !important
 			width: 32px
 			height: 32px
-			background-color: #630814
+			background-color: #c16b15
 			svg
 				@apply rem:w-[16px] rem:h-[16px]
-		form
-			.form-row-submit
-				@apply flex-center relative
-				.wpcf7-spinner
-					@apply absolute right-[300px] top-1/2 -translate-y-1/2 ml-2
-				.button-primary
-					@apply cursor-pointer
-					&:hover
-						@apply bg-Primary-6 text-Neutral-White
-			.form-group
-				label
-					@apply text-Primary-6
-	// .indicator-swipe
-	// 	&:not(.custom)
-	// 		@apply absolute top-1/2 -translate-y-1/2  right-15
-	// 	@apply z-30 bg-blue-75 w-[calc(144/19.2*1rem)] h-14 rounded-full flex justify-between items-center px-3 pointer-events-none
-	// 	@apply transition-all
-	// 	// &:not(.active)
-	// 	// 	@apply opacity-0
-	// 	svg
-	// 		@apply stroke-white
-	// 	.hand
-	// 		animation: moveSwipeGesture 2.25s infinite ease-in-out
-	// 		@apply md:w-12 md:h-12 w-10 h-10
-	// @keyframes moveSwipeGesture
-	// 	0%
-	// 		transform: translateX(-8px)
-	// 	50%
-	// 		transform: translateX(8px)
-	// 	100%
-	// 		transform: translateX(-8px)
+	@media (max-width: 1023.98px)
+		#popup-form
+			.carousel__button
+				@apply  right-[1.5rem] #{!important}
+	@media (max-width: 767.98px)
+		#popup-form
+			.carousel__button
+				@apply top-[1rem] right-[1.5rem] #{!important}
+		
+
+
+	

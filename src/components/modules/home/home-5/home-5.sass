@@ -1,0 +1,17 @@
+.home-5
+	.swiper
+		.item
+			.content
+				@apply absolute px-8 pb-8 pt-15 bottom-0 left-0 w-full z-10
+				&::before
+					content: ""
+					background: linear-gradient(0deg, rgba(41, 41, 41, 0.80) 0%, rgba(41, 41, 41, 0.00) 100%)
+					@apply pointer-events-none bottom-0 z-[-3] left-0 w-full absolute h-full rounded-2xl
+@media (max-width: 767.98px)
+	.home-5
+		.swiper
+			.item
+				.content
+					@apply p-4
+					h3
+						@apply text-lg

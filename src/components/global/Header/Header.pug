@@ -4,12 +4,60 @@ header.header
 			input#search-btn(type="text", class="searchinput", placeholder="Tìm kiếm...", class="px-4 py-2 rounded bg-Neutral-White shadow-lg w-full cursor-pointer")
 			.search-icon(class="absolute top-2/4 -translate-y-2/4 right-0 pr-5 text-Primary-Primary_01")
 				i.fa-sharp.fa-regular.fa-magnifying-glass
-	//- .header-bar-mobile
-	//- 	.header-bar 
-	//- 		i.fa-solid.fa-bars
-	//- .header-search 
-	//- 	i.fa-regular.fa-magnifying-glass
-
+	
+	.container 
+		.header-main(class="xl:flex hidden items-center justify-between")
+			.header-logo(class="rem:w-[140px]") 
+				a(href="#" class="img-ratio ratio:pt-[120_140]")
+					img(src="./img/logo.png", alt="") 
+			.header-menu(class="flex items-center justify-between h-full")
+				ul.header-nav
+					li 
+						a(href="./home.html") Home
+					li 
+						a(href="#") About us
+					li 
+						a(href="#") Destinations
+					li 
+						a(href="#") Services
+					li 
+						a(href="#") Resource
+					li 
+						a(href="#") Adventures
+					li 
+						a(href="#") Contact
+			.header-right(class="flex items-center rem:gap-[10px]")
+				.header-search(class="hidden xl:block cursor-pointer text-Neutral-White")
+					.header-search-icon(class="text-Neutral-White") 
+						i.fa-solid.fa-magnifying-glass
+				.header-language(class="flex items-center gap-2 cursor-pointer text-Neutral-White") 
+					.wpml-ls
+						a(href="/", class="") VN
+					ul.wpml-ls-sub-menu
+						li
+							a(href="/", class="") EN
+				.header-button(class="flex items-center gap-2")
+					.get(class="rem:w-[145px]")
+						+ButtonPrimary("Get A Quote") 
+					.contact(class="rem:w-[114px]") 
+						+ButtonPrimary("Contact") 
+		.header-main-mobile(class="xl:hidden flex items-center justify-between")
+			.header-language-mobile(class="flex items-center gap-2 cursor-pointer text-Neutral-950") 
+					.wpml-ls
+						a(href="/", class="") VN
+					ul.wpml-ls-sub-menu
+						li
+							a(href="/", class="") EN
+			.header-logo-mobile(class="w-[7rem] h-[72px] absolute left-2/4 -translate-x-2/4")
+				a(href="#" class="w-full h-full blocks")
+					img(src="./img/logo-primary.png", alt="" class="w-full h-full object-cover") 
+			.header-right-mobile(class="flex items-center gap-2")
+				.header-search 
+					i.fa-regular.fa-magnifying-glass
+				.header-bar-mobile
+					.header-bar 
+						i.fa-solid.fa-bars
+				
 	.header-nav-mobile(class="block lg:hidden")
 		ul(class="flex items-center text-white")
 			li

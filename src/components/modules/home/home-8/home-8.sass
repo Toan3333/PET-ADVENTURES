@@ -1,0 +1,24 @@
+.home-8
+	.col-right
+		.item
+			@apply flex flex-col relative overflow-hidden cursor-pointer z-10
+			&::before
+				content: ""
+				transform: translateY(100%)
+				transition: transform 0.4s ease-in-out
+				@apply absolute left-0 bottom-0 w-full h-full bg-Primary-1 z-0
+			&:hover::before
+				@apply translate-y-0
+			&:hover
+				@apply text-Neutral-White
+				.icon
+					@apply transition-all ease-linear
+					img
+						@apply brightness-0 invert
+				.content
+					@apply text-Neutral-White
+			.content
+				@apply flex flex-col flex-1  relative z-10
+				.info
+					@apply mt-auto
+				

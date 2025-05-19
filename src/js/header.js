@@ -47,11 +47,18 @@ export const header = {
 		});
 	},
 	initVariable: function () {
-		const $header = $(".header"); // Chắc chắn đúng selector
-		if ($header.length) {
-			const height = $header.outerHeight(); // outerHeight có padding & border
+		const $header = $(".header");
+		if (!$header.length) return;
+
+		const setHeight = () => {
+			const height = $header.outerHeight();
 			document.documentElement.style.setProperty("--header-height", `${height}px`);
-		}
+		};
+
+		setHeight();
+
+		const observer = new ResizeObserver(setHeight);
+		observer.observe($header[0]);
 	},
 	init: function () {
 		headerSearch();

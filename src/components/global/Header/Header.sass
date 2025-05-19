@@ -1,5 +1,5 @@
 .header
-	@apply py-4 sticky left-0 right-0 z-100 top-0
+	@apply py-4 sticky left-0 right-0 z-100 top-0 
 	.header-logo
 		img.logo-active
 			@apply hidden
@@ -23,18 +23,18 @@
 			.wpml-ls
 				a
 					@apply text-base font-semibold relative flex items-center gap-2
-					&::after
+					// &::after
 						
-						content: '\f0d7'
-						@apply font-awesome text-white text-xs font-black flex-shrink-0 transition-all duration-300
+					// 	content: '\f0d7'
+					// 	@apply font-awesome text-white text-xs font-black flex-shrink-0 transition-all duration-300
 			.wpml-ls-sub-menu
 				@apply absolute top-full left-0 bg-white p-1 rounded-sm shadow-lg opacity-0 invisible transition-all duration-300 ease-out transform origin-top-right scale-95
 				li
 					a
 						@apply text-center font-bold text-Primary-1 block text-base hover:bg-gray-100 p-1 rounded-sm transition-colors duration-200 leading-none
-			&:hover
-				.wpml-ls-sub-menu
-					@apply opacity-100 visible translate-y-0
+			// &:hover
+			// 	.wpml-ls-sub-menu
+			// 		@apply opacity-100 visible translate-y-0
 
 	&.active
 		@apply bg-Neutral-White text-Neutral-950 p-0
@@ -98,7 +98,7 @@
 	.header
 		@apply bg-Neutral-White shadow-Dropshadow-Light
 		.header-main-mobile 
-			@apply h-[70px]
+			@apply h-[80px]
 			.header-search
 				@apply w-12 h-12 flex-shrink-0 
 				@apply inline-flex items-center justify-center 

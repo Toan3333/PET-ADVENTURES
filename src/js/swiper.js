@@ -25,10 +25,10 @@ function swiperBanner() {
 		slidesPerView: 1,
 		modules: [Autoplay, Navigation],
 		loop: true,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false,
-		},
+		// autoplay: {
+		// 	delay: 5000,
+		// 	disableOnInteraction: false,
+		// },
 		speed: 1500,
 		navigation: {
 			nextEl: ".home-1 .btn-next",

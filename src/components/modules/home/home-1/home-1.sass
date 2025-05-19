@@ -1,13 +1,15 @@
 .home-1
-	margin-top: calc(-1 * var(--header-height))
+	margin-top: calc(-1 * 7.916666666666667rem)
 	.home-1-banner
 		&::before
 			content: ""
 			background: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%)
 			@apply absolute top-0 left-0 w-full h-full pointer-events-none z-2
 		.home-1-content
-			h1
-				line-height: calc( 92 / 92 )
+			.title
+				h1
+					line-height: calc( 92 / 92 )
+					@apply xl:rem:text-[92px] lg:text-64 font-bold font-primary text-Primary-3 mb-15
 
 	.wrap-button-slide
 		.btn-prev 

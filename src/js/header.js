@@ -8,10 +8,10 @@ const vw = $(window).width();
 export const header = {
 	scrollActive: function () {
 		const height = $("header").height();
-		const isMobile = window.innerWidth <= 768; // tùy breakpoint bạn dùng
+		const isMobile = window.innerWidth <= 768;
 
 		if (isMobile) {
-			$("header").removeClass("active"); // luôn xóa class ở mobile
+			$("header").removeClass("active");
 			return;
 		}
 
@@ -47,18 +47,26 @@ export const header = {
 		});
 	},
 	initVariable: function () {
-		const $header = $(".header");
-		if (!$header.length) return;
+		const $header = document.querySelector("header");
+		if (!$header) return;
 
-		const setHeight = () => {
-			const height = $header.outerHeight();
+		// Hàm cập nhật chiều cao header
+		function updateHeaderHeight() {
+			const height = $header.offsetHeight;
 			document.documentElement.style.setProperty("--header-height", `${height}px`);
-		};
+		}
 
-		setHeight();
+		// Cập nhật ban đầu
+		updateHeaderHeight();
 
-		const observer = new ResizeObserver(setHeight);
-		observer.observe($header[0]);
+		// Theo dõi mọi thay đổi chiều cao của header
+		const ro = new ResizeObserver(updateHeaderHeight);
+		ro.observe($header);
+
+		// Phòng trường hợp ảnh hoặc font chưa load xong
+		window.addEventListener("load", () => {
+			setTimeout(updateHeaderHeight, 100);
+		});
 	},
 	init: function () {
 		headerSearch();

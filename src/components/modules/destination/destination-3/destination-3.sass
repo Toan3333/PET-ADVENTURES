@@ -9,13 +9,11 @@
 			@apply bg-Primary-2 rounded-1
 		.item
 			@apply even:bg-[#E8E0D0] even:rounded-2xl
-	.destination-3-link 
-		@apply py-6 
-		ul
-			@apply flex items-center md:justify-center justify-start gap-6  whitespace-nowrap overflow-x-auto
-			li
-				a
-					@apply text-Neutral-White py-3 px-6 rounded-full 
-					@apply border border-Neutral-White bg-transparent inline-flex items-center justify-center hover:bg-Neutral-White hover:text-Primary-2
-					&.active
-						@apply bg-Neutral-White text-Primary-2
+	ul.tabslet-tab
+		@apply flex items-center md:justify-center justify-start gap-6  whitespace-nowrap overflow-x-auto pt-6 mb-base
+		li
+			
+			@apply text-Neutral-White py-3 px-6 rounded-full 
+			@apply border border-Neutral-White bg-transparent inline-flex items-center justify-center hover:bg-Neutral-White hover:text-Primary-2
+			&.active
+				@apply bg-Neutral-White text-Primary-2

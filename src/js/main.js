@@ -22,27 +22,22 @@ $(document).ready(function () {
 
 	const $items = $(".destination-6 .item");
 	const $contents = $(".destination-6 .content");
-
-	// Function to reset active states
 	function resetActive() {
 		$items.removeClass("active");
 		$contents.removeClass("active");
 	}
 
-	// Hover event handler
-	$items.on("mouseenter", function () {
+	$items.on("click", function () {
 		resetActive();
 		const id = $(this).data("id");
 		const $content = $(`.content[data-id="${id}"]`);
 
-		// Check if content exists before adding active class
 		if ($content.length > 0) {
 			$(this).addClass("active");
 			$content.addClass("active");
 		}
 	});
 
-	// Set the first item as active by default (if items and contents exist)
 	if ($items.length > 0 && $contents.length > 0) {
 		const $firstItem = $items.first();
 		const $firstContent = $contents.first();

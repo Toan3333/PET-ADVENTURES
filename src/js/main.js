@@ -51,6 +51,8 @@ $(document).ready(function () {
 		$firstContent.addClass("active");
 	}
 
+	
+
 function TabNav() {
 	$('.list-tab li:first-child').addClass('active');
 		$('.tab-content').hide();

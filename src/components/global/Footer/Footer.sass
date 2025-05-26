@@ -5,17 +5,23 @@
 		grid-template-columns: 2.7fr 1.5fr 2fr 3fr
 		@apply gap-25
 		.footer-column
+			h3
+				@apply text-white
 			ul.footer-menu
 				@apply flex flex-col gap-6
 				li
 					a
-						@apply rem:text-[16px] border-b border-b-transparent hover:border-b-Neutral-White				
+						@apply rem:text-[16px] border-b border-b-transparent hover:border-b-Neutral-White	
+			.wrap-item-toggle
+				.item-toggle
+					&:last-child
+						@apply border-b-0
 
 	.footer-contact 
 		.form-input 
 			@apply w-full
 			input
-				@apply w-full py-2 px-4 rounded-lg bg-Neutral-White
+				@apply w-full py-2 px-4 rounded-lg bg-Neutral-White mb-0
 	.footer-social 
 		@apply flex items-center justify-between mt-base mb-8
 		a
@@ -68,3 +74,14 @@
 		.footer-bottom
 			.copyright
 				@apply text-center
+
+#popup-contact
+	@apply rem:max-w-[1090px] w-full rounded-2xl
+	h3
+		@apply text-30 font-bold text-Primary-2 mb-3
+	input,
+	textarea
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+		&.wpcf7-form-control
+			&:focus
+				@apply outline-none border-none

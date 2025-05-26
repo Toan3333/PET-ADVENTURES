@@ -1,39 +1,81 @@
+//-section.destination-8(class="section-py")
+//-	.container 
+//-		h2(class="title-48 text-center mb-base") Consultation Contact Form
+//-		.box(class="bg-Primary-3 rounded-[32px] lg:pl-20 p-10")
+//-			.wrapper(class="flex lg:flex-row flex-col gap-base")
+//-				.col-left(class="lg:rem:w-[688px] w-full lg:rem:py-[55px] py-0")
+//-					form(action="")
+//-						.form-list(class="grid grid-cols-2 gap-3 max-md:grid-cols-1")
+//-							.form-group
+//-								input(type="text" placeholder="First Name")
+//-							.form-group
+//-								input(type="text" placeholder="Last Name")
+//-							.form-group
+//-								input(type="text" placeholder="Phone Number/ Whatsapp Number")
+//-							.form-group
+//-								input(type="text" placeholder="Email")
+//-							.form-group.select-view
+//-								select(name="yourSelectName")
+//-									option(value="") -- Please choose an option --
+//-									option(value="option1") Option 1
+//-									option(value="option2") Option 2
+//-									option(value="option3") Option 3
+//-							.form-group.select-view
+//-								select(name="yourSelectName")
+//-									option(value="") -- Please choose an option --
+//-									option(value="option1") Option 1
+//-									option(value="option2") Option 2
+//-									option(value="option3") Option 3
+
+//-							.form-content(class="col-span-2")
+//-								textarea(name="message" placeholder="How can I help you?")
+//-						.form-submit
+//-							a(href="#" class="button-primary orange")
+//-								span Send
+//-				.col-right(class="lg:w-[calc(100%-35.833333333333336rem-2.08333rem)] w-full bg-Primary-2 lg:rounded-tr-[32px] lg:rounded-br-[32px] rounded-2xl relative")
+//-					.image(class="lg:absolute static rem:top-[-46px] rem:w-[621px]")
+//-						a(href="#" class="img-ratio ratio:pt-[480_621] lozad")
+//-							img(src="./img/contact-bg.png", alt="") 
+
+
 section.destination-8(class="section-py")
 	.container 
 		h2(class="title-48 text-center mb-base") Consultation Contact Form
-		.box(class="bg-Primary-3 rounded-[32px] lg:pl-20 p-10")
-			.wrapper(class="flex lg:flex-row flex-col gap-base")
-				.col-left(class="lg:rem:w-[688px] w-full lg:rem:py-[55px] py-0")
-					form(action="")
-						.form-list(class="grid grid-cols-2 gap-3 max-md:grid-cols-1")
-							.form-group
-								input(type="text" placeholder="First Name")
-							.form-group
-								input(type="text" placeholder="Last Name")
-							.form-group
-								input(type="text" placeholder="Phone Number/ Whatsapp Number")
-							.form-group
-								input(type="text" placeholder="Email")
-							.form-group.select-view
-								select(name="yourSelectName")
-									option(value="") -- Please choose an option --
-									option(value="option1") Option 1
-									option(value="option2") Option 2
-									option(value="option3") Option 3
-							.form-group.select-view
-								select(name="yourSelectName")
-									option(value="") -- Please choose an option --
-									option(value="option1") Option 1
-									option(value="option2") Option 2
-									option(value="option3") Option 3
+		.wrap-box-form
+			.grid(class="lg:grid-cols-12 gap-10")
+				div(class="col-span-7")
+					.col-left(class="")
+						form(action="")
+							.form-list(class="grid grid-cols-2 gap-3 max-md:grid-cols-1")
+								.form-group
+									input(type="text" placeholder="First Name")
+								.form-group
+									input(type="text" placeholder="Last Name")
+								.form-group
+									input(type="text" placeholder="Phone Number/ Whatsapp Number")
+								.form-group
+									input(type="text" placeholder="Email")
+								.form-group.select-view
+									select(name="yourSelectName")
+										option(value="") -- Please choose an option --
+										option(value="option1") Option 1
+										option(value="option2") Option 2
+										option(value="option3") Option 3
+								.form-group.select-view
+									select(name="yourSelectName")
+										option(value="") -- Please choose an option --
+										option(value="option1") Option 1
+										option(value="option2") Option 2
+										option(value="option3") Option 3
 
-							.form-content(class="col-span-2")
-								textarea(name="message" placeholder="How can I help you?")
-						.form-submit
-							a(href="#" class="button-primary orange")
-								span Send
-				.col-right(class="lg:w-[calc(100%-35.833333333333336rem-2.08333rem)] w-full bg-Primary-2 lg:rounded-tr-[32px] lg:rounded-br-[32px] rounded-2xl relative")
-					.image(class="lg:absolute static rem:top-[-46px] rem:w-[621px]")
-						a(href="#" class="img-ratio ratio:pt-[480_621] lozad")
-							img(src="./img/contact-bg.png", alt="") 
+								.form-content(class="col-span-2")
+									textarea(name="message" placeholder="How can I help you?")
+							.form-submit
+								a(href="#" class="button-primary orange")
+									span Send
+				div(class="col-span-5")
+					.col-right(class=" relative")
+						.image(class="")
+							a(class="img-ratio ratio:pt-[480_621] img-form-pet")
+								img(src="./img/contact-bg.png", alt="") 
 

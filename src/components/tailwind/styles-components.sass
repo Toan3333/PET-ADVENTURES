@@ -1,7 +1,7 @@
 @layer components
 	.item-comp
 		@apply flex
-	.button-to-top
+	.button-form
 		@apply  w-10 h-10 bg-Primary-2 flex-center flex-shrink-0 rounded-lg cursor-pointer
 		&.active
 			@apply opacity-100 pointer-events-auto
@@ -29,25 +29,29 @@
 				&:focus
 					@apply outline-none #{!important}
 				.image
-					@apply rounded-3xl
+					@apply rounded-3xl h-full
 					&:focus
 						@apply outline-none #{!important}
 					a
+						@apply h-full
 						img
 							@apply block
 			.col-right
 				@apply md:py-10 md:px-8 p-6 bg-Neutral-White md:rounded-tr-3xl md:rounded-br-3xl rounded-none
 				.form-list
 					.form-group
-						@apply w-full col-span-2 lg:col-span-1
+						@apply w-full col-span-2 lg:col-span-1 mb-0
 						input,select
+							border: rgb(220, 220, 220) solid 1px !important
 							@apply w-full py-2 px-4 rounded-lg bg-Neutral-White h-full xl:rem:h-[36px]
-							@apply border border-Neutral-200 text-sm font-normal text-Neutral-500-main				
+							@apply border border-Neutral-200 text-sm font-normal text-Neutral-500-main mb-0		
 							&:focus
 								@apply outline-none #{!important}
 						textarea
 							&:focus
 								@apply outline-none #{!important}
+						p
+							@apply w-full
 					.select-view
 						@apply flex items-center gap-3 relative text-Neutral-500-main
 						&::before
@@ -63,12 +67,15 @@
 					.form-content
 						@apply w-full rem:h-[120px]
 						textarea
+							border: rgb(220, 220, 220) solid 1px !important
 							@apply w-full py-2 px-4 rounded-lg bg-Neutral-White
 							@apply border border-Neutral-200 text-sm font-normal text-Neutral-500-main h-full
 				.form-submit
-					@apply flex mt-5
+					@apply  mt-5
 					.button-primary
 						@apply py-2 px-6
+				.wpcf7-not-valid-tip
+					@apply static rem:mt-[10px]
 		.carousel__button
 			position: absolute !important
 			top: 0.5rem !important

@@ -1,0 +1,67 @@
+.section-contact
+	@apply font-primary
+	.list-tab
+		@apply flex items-center gap-14 pb-6
+		li
+			@apply pb-3
+			&.active,
+			&:hover
+				@apply border-b-Primary-2 border-solid border-b
+				a
+					@apply text-Primary-2
+			&.active
+				a
+					@apply text-Primary-2
+			a
+				@apply text-base uppercase font-bold text-Primary-2
+	.tab-content
+		@apply border-t-Primary-2 border-t pt-6
+		.content
+			@apply flex flex-col gap-4
+			.list-address
+				@apply flex flex-col gap-2
+				.item
+					@apply flex gap-3
+					&:hover
+						.caption
+							@apply underline
+					.icon
+						@apply text-base font-light text-Primary-2
+		.map-item
+			iframe
+				@apply rem:h-[425px] rounded-xl rem:w-[560px]
+	.wrap-form-contact 
+		@apply bg-[rgb(239,237,233)] p-8 lg:p-12 flex flex-col gap-8 rounded-xl
+		.desc
+			@apply text-center text-base text-Primary-2 font-normal
+			span
+				@apply text-Primary-2
+		.wrap-form
+			@apply flex flex-col
+			.form-item
+				input,
+				textarea
+					@apply rounded-1 py-3 px-5
+			.button-primary
+				@apply mx-auto mt-5 bg-Primary-2 text-white w-fit
+				&:hover
+					@apply bg-Primary-1
+	.form-group
+		@apply flex gap-6 flex-col lg:flex-row
+		.form-item
+			@apply w-full
+			input,
+			select,
+			textarea
+				@apply w-full bg-white py-4 px-6 rounded-lg text-base text-neutral-500
+				@apply border-none outline-none
+			select
+				background-image: url('../img/select.png')
+				background-position: right 0.75rem center
+				@apply appearance-none bg-no-repeat cursor-pointer text-neutral-400
+			option
+				@apply text-neutral-500 #{!important}
+	.wpcf7-response-output
+		@apply text-Primary-3 border-Primary-2 font-bold #{!important}
+	.wpcf7-not-valid-tip
+		@apply static

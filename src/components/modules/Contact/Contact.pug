@@ -1,0 +1,82 @@
+section.py-20.pb-10.section-contact(class="pt-8 lg:pt-20")
+	.container
+		.grid(class="grid-cols-1 lg:grid-cols-12 gap-10")
+			.grid(class="col-span-full lg:col-span-5 gap-6 overflow-hidden")
+				h2(class="text-5xl font-bold text-primary-1 uppercase") LIÊN HỆ VỚI CHÚNG TÔI
+				.wrap-tab-contact 
+					ul.list-tab 
+						li 
+							a(href="#tab-1") Tân Sơn Nhất
+						li 
+							a(href="#tab-2") NỘI BÀI
+						li 
+							a(href="#tab-3") CAM RANH
+						li 
+							a(href="#tab-4") ĐÀ NẴNG
+						li 
+							a(href="#tab-5") PHÚ QUỐC
+					.tab-content#tab-1 
+						.grid(class="grid-cols-1 lg:grid-cols-5 gap-x-10 gap-y-6")
+							.grid(class="col-span-full lg:col-span-3")
+								.content(class="font-secondary text-primary-1") 
+									h4(class="text-xl font-bold") Sân Bay Tân Sơn Nhất
+									.list-address 
+										.item 
+											.icon 
+												i(class="fa-light fa-location-dot")
+											.caption(class="text-base font-normal text-[#333]") Add: Lot 45, My Tho Industrial Park, Tien Giang Province, Vietnam
+										.item 
+											.icon 
+												<i class="fa-regular fa-phone"></i>
+											.caption(class="text-base font-normal text-[#333]") Tel: (+84) 2733 953 227
+										.item 
+											.icon 
+												<i class="fa-regular fa-mail"></i>
+											.caption(class="text-base font-normal text-[#333]") Email: godang@godaco.vn
+							.grid(class="col-span-full lg:col-span-2")
+								.image(class="ratio:pt-[200_200] img-ratio rounded-lg overflow-hidden")
+									img(class="" src="./img/banner.png", alt="")
+							.map-item 
+								<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15674.997175900808!2d106.64063747705616!3d10.830488062969815!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529111aa89f9d%3A0xd8f09cc0aa1b27f3!2zQ-G6o25nIGjDoG5nIGtow7RuZyBxdeG7kWMgdOG6vyBUw6JuIFPGoW4gTmjhuqV0!5e0!3m2!1svi!2s!4v1742788781024!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					.tab-content#tab-2
+						.grid(class="grid-cols-1 lg:grid-cols-5 gap-10")
+							.grid(class="col-span-full lg:col-span-3")
+								.content(class="font-secondary text-primary-1") 
+									h4(class="text-xl font-bold") NỘI BÀI
+									.list-address 
+										.item 
+											.icon 
+												i(class="fa-light fa-location-dot")
+											.caption(class="text-base font-normal text-[#333]") Add: Lot 45, My Tho Industrial Park, Tien Giang Province, Vietnam
+										.item 
+											.icon 
+												<i class="fa-regular fa-phone"></i>
+											.caption(class="text-base font-normal text-[#333]") Tel: (+84) 2733 953 227
+										.item 
+											.icon 
+												<i class="fa-regular fa-mail"></i>
+											.caption(class="text-base font-normal text-[#333]") Email: godang@godaco.vn
+							.grid(class="col-span-2")
+								.image(class="ratio:pt-[200_200] img-ratio rounded-lg overflow-hidden")
+									img(class="" src="./img/banner.png", alt="")
+			.grid(class="col-span-full lg:col-span-7")
+				.wrap-form-contact 
+					.desc Mọi mối quan hệ hợp tác tốt đẹp đều bắt đầu bằng một cuộc trò chuyện. <br> <span>Hãy liên hệ với chúng tôi,</span> mọi mong muốn của bạn sẽ được lắng nghe.
+					.wrap-form 
+						.form-group 
+							.form-item
+								input(type="text" placeholder="Họ và tên")
+						.form-group 
+							.form-item
+								input(type="text" placeholder="Số điện thoại")
+						.form-group 
+							.form-item
+								input(type="text" placeholder="Email*")
+						.form-group 
+							.form-item
+								input(type="text" placeholder="Email")
+						.form-group 
+							.form-item
+								textarea(type="text" col="40" rows="10" placeholder="Nội dung")
+						button(class="button-primary") 
+							.text gửi ngay

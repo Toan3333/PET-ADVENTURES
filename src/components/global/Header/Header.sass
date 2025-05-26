@@ -94,6 +94,19 @@
 	opacity: 1
 	visibility: visible
 	transition: opacity 0.3s ease-in-out, visibility 0s
+
+.header-language
+	.wpml-ls
+		.wpml-ls-item 
+			@apply relative
+			&.wpml-ls-current-language
+				a
+					@apply block #{!important}
+			a
+				@apply hidden #{!important}
+				&:hover
+					@apply block #{!important}
+
 @media (max-width: 1279.98px)
 	.header
 		@apply bg-Neutral-White shadow-Dropshadow-Light

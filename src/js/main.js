@@ -19,6 +19,7 @@ $(document).ready(function () {
 	buttonToTop();
 	ToggleItem();
 	countUpInit();
+	TabNav();
 
 	const $items = $(".destination-6 .item");
 	const $contents = $(".destination-6 .content");
@@ -44,9 +45,52 @@ $(document).ready(function () {
 		$firstItem.addClass("active");
 		$firstContent.addClass("active");
 	}
+
+	
+
+function TabNav() {
+	$('.list-tab li:first-child').addClass('active');
+		$('.tab-content').hide();
+		$('.tab-content:first').show();
+
+		$('.list-tab li').click(function(){
+		$('.list-tab li').removeClass('active');
+		$(this).addClass('active');
+		$('.tab-content').hide();
+		
+		var activeTab = $(this).find('a').attr('href');
+		$(activeTab).fadeIn();
+		return false;
+		});
+	}
+	
 });
 
-// fancyfox popup
+
+
+ //fancyfox popup
+//document.addEventListener("DOMContentLoaded", function () {
+//	Fancybox.bind("[data-fancybox]", {
+//		dragToClose: false,
+//		backdropClick: false,
+//		template: {
+//			closeButton:
+//				'<button class="fancybox-button fancybox-button--close" title="Close"><i class="fa-duotone fa-solid fa-xmark"></i></button>',
+//		},
+//	});
+//});
+
+//setTimeout(() => {
+//	Fancybox.show([
+//		{
+//			src: "#popup-form",
+//			type: "inline",
+//			dragToClose: false,
+//			backdropClick: false,
+//		},
+//	]);
+//}, 15000);
+
 document.addEventListener("DOMContentLoaded", function () {
 	Fancybox.bind("[data-fancybox]", {
 		dragToClose: false,
@@ -56,18 +100,25 @@ document.addEventListener("DOMContentLoaded", function () {
 				'<button class="fancybox-button fancybox-button--close" title="Close"><i class="fa-duotone fa-solid fa-xmark"></i></button>',
 		},
 	});
+
+	if (sessionStorage.getItem("homePopupShown") !== "true") {
+		if (window.location.pathname === "/" || window.location.pathname === "/index.php") {
+			setTimeout(() => {
+				Fancybox.show([
+					{
+						src: "#popup-form",
+						type: "inline",
+						dragToClose: false,
+						backdropClick: false,
+					},
+				]);
+
+				sessionStorage.setItem("homePopupShown", "true");
+			}, 15000);
+		}
+	}
 });
 
-setTimeout(() => {
-	Fancybox.show([
-		{
-			src: "#popup-form",
-			type: "inline",
-			dragToClose: false,
-			backdropClick: false,
-		},
-	]);
-}, 15000);
 
 /*==================== Aos Init ====================*/
 AOS.init({

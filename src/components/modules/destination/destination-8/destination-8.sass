@@ -1,11 +1,14 @@
 .destination-8
 	.col-left
 		.form-list
+			@apply gap-3
 			.form-group
-				@apply w-full
+				@apply w-full mb-0
 				input,select
 					@apply w-full py-2 px-4 rounded-lg bg-Neutral-White rem:h-[36px]
-					@apply border border-Neutral-200 text-sm font-normal text-Neutral-500-main
+					@apply border border-Neutral-200 text-sm font-normal text-Neutral-500-main mb-0
+				.wpcf7-not-valid-tip
+					@apply static rem:mt-[10px]
 				
 	
 			.select-view
@@ -20,6 +23,8 @@
 					-webkit-appearance: none
 					-moz-appearance: none
 					@apply border border-Neutral-200  py-2 px-4 w-full cursor-pointer
+				p
+					@apply w-full
 			.form-content
 				@apply w-full rem:h-[120px]
 				textarea
@@ -29,6 +34,19 @@
 			@apply inline-flex mt-5
 			.button-primary
 				@apply py-2 px-6
+	.wrap-box-form
+		@apply bg-Primary-3 rem:rounded-[32px]
+		.col-left
+			@apply py-14 pl-20
+		.col-right
+			
+			.image
+				&::before
+					content:""
+					@apply absolute w-full h-full bg-Primary-2
+					@apply rem:rounded-[0px_32px_0px_0px]
+			.img-form-pet
+				@apply rem:left-[40px] z-2
 @media (max-width: 1279.98px)
 	.destination-8
 		.col-right
